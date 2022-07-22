@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" 
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+   <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  /* height: 100vh; */
+  margin-top:20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* background: linear-gradient(#ee7f8a , #1ee9d539); */
+  
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+}
+.title1{
+  text-align: center;
+  font-size: 25px;
+  color: #8704fa;
+  font-weight: 500;
+  font-size: xx-large;
+
+}
+ .title{
+    text-align: center;
+  font-size: 25px;
+  color: #25fa04;
+  font-weight: 500;
+  font-size: large;
+  /* position: relative; */
+}
+.title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  /* background: linear-gradient(#ee7f8a , #1ee9d539); */
+}
+ .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+ .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #4a04fa;
+}
+ .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 20px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+ .input-box input:focus,
+.input-box input:valid{
+  border-color: #bf24fc;
+}
+.button{
+   height: 45px;
+   margin: 35px 0
+ }
+ .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 20px;
+   border: none;
+   color: #3504face; 
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background-color:  rgba(144, 137, 137, 0.255);
+ }
+.button input:hover{
+  transform: scale(0.99);
+  background-color:  rgba(183, 9, 9, 0.478);
+  }
+ .container{
+  max-width: 75%;
+ }
+ .myimages1{
+  border-radius: 50%;
+  border: 2px solid red;
+ }
+   </style>
+    </head>
+<body>
+  <div class="container" style="display: block; " id="resume_form">
+    <div class="title1">Resume Generator</div>
+    <div class="content">
+     
+        <div class="title" style="width: 100%;">personal details</div>
+        <div class="user-details">
+          <div class="input-box" >
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" id="singh">
+            <!-- <textarea  type="text" placeholder="Enter your name" id="singh"></textarea> -->
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="text" placeholder="eg : 2nd jan , 2002" id="DateOfBirth">
+          </div>
+        
+          <div class="input-box1">
+            <span class="details">Objectives</span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter Objectives here " required style="border-radius: 10px;height: 90px; width: 500px; padding:10px ;" id="objectivesform" ></textarea>
+          </div>
+
+          <div class="input-box1">
+            <span class="details">work experience</span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter work experience" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;" id="workexperienceForm" ></textarea>
+          </div>
+          <div class="title" style="width: 100%;">Educational details</div>
+          <div class="title" >Graduation details</div>
+          <div class="input-box">
+            <span class="details">Institute</span>
+            <input type="text" placeholder="institute" id="graduationInstitute">
+          </div>
+          <div class="input-box">
+            <span class="details">Grade</span>
+            <input type="text" placeholder=" upto last sem cgpa" id="graduationGrade">
+          </div>
+          <div class="input-box">
+            <span class="details">year of Graduation</span>
+            <input type="text" placeholder="eg:-2024" id="graduationYr">
+          </div>
+          <div class="input-box1">
+            <span class="details">Academic achievement </span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter Academic achievement" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;" id="graduationAcademic" ></textarea>
+          </div>
+          <div class="input-box1">
+            <span class="details">Additional / Curricular Activities </span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter Additional / Curricular Activities" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;" id="graduationExtra" ></textarea>
+          </div>
+          <div class="title" >Intermediate details</div>
+          <div class="input-box">
+            <span class="details">Institute</span>
+            <input type="text" placeholder="institute" id="interinstitte">
+          </div>
+          <div class="input-box">
+            <span class="details">Grade</span>
+            <input type="text" placeholder="CGPA" id="interGrade">
+          </div>
+          <div class="input-box">
+            <span class="details">year of completion</span>
+            <input type="text" placeholder="eg:- 2020" id="interyr">
+          </div>
+          <div class="input-box1">
+            <span class="details">Academic achievement</span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter Academic achievement" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;" id="interachievement" ></textarea>
+          </div>
+          <div class="input-box1">
+            <span class="details">Additional / Curricular Activities </span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter Additional / Curricular Activities " required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;" id="interActivities" ></textarea>
+          </div>
+          <div class="title" >SSC details</div>
+          <div class="input-box">
+            <span class="details">Institute</span>
+            <input type="text" placeholder="institute" id="sscinstitute">
+          </div>
+          <div class="input-box">
+            <span class="details">Grade</span>
+            <input type="text" placeholder="Grade" id="sscGrade">
+          </div>
+          <div class="input-box">
+            <span class="details">year of completion</span>
+            <input type="text" placeholder="year of completion" id="sscyr">
+          </div>
+          <div class="input-box1">
+            <span class="details">Academic achievement</span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter Academic achievement" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;" id="sscacheive" ></textarea>
+          </div>
+          <div class="input-box1">
+            <span class="details">Additional / Curricular Activities </span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            <textarea type="text" placeholder="Enter Additional / Curricular Activities" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;"id="sscAdditional" ></textarea>
+          </div>
+          <div class="title" style="width: 100%;">project details<span><h6 >(mention two of your projects)</h6></span></div>
+          <div class="input-box">
+            <span class="details">Project 1</span>
+            <input type="text" placeholder="Enter title of project" id="projectOne">
+            <!-- <textarea type="text" placeholder="Enter your username" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;" id="projectOne"></textarea> -->
+          </div>
+          <div class="input-box">
+            <span class="details">Project 2 </span>
+            <input type="text" placeholder="Enter title of project" id="projectTwo">
+            <!-- <textarea type="text" placeholder="Enter your username" required style=" padding:10px ;border-radius: 20px;height: 90px;width: 500px;"id="projectTwo" ></textarea> -->
+          </div>
+          <div class="title" style="width: 100%;">Internship details<span><h6 >(mention two of your internship)</h6></span></div>
+          <div class="input-box">
+            <span class="details">Internship1</span>
+            <input type="text" placeholder="Enter the position of internship" id="internOne">
+            <!-- <textarea type="text" placeholder="Enter your username" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;"id="internOne" ></textarea> -->
+          </div>
+          <div class="input-box">
+            <span class="details">Internship2</span>
+            <input type="text" placeholder="Enter the position of internship" id="internTwo">
+            <!-- <textarea type="text" placeholder="Enter your username" required style=" padding:10px ;border-radius: 10px;height: 90px;width: 500px;"id="internTwo" ></textarea> -->
+          </div>
+
+          
+          <div class="title" style="width: 100%;">Contact details</div>
+
+          <div class="input-box">
+            <span class="details">Phone number</span>
+            <input type="text" placeholder="provide current working number" id="phoneOne">
+          </div>
+          <div class="input-box">
+            <span class="details">Alternative phone number</span>
+            <input type="text" placeholder=" current working number" id="phoneTwo">
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter using email" id="EmailOne">
+          </div>
+          <div class="input-box">
+            <span class="details">Alternative email</span>
+            <input type="text" placeholder="Enter using email" id="EmailTwo">
+          </div>
+          <div class="input-box">
+            <span class="details">Social media links ( url )</span>
+            <input type="text" placeholder="eg: twiitter , linkedin , github , instagram" id="socialmediaOne">
+          </div>
+          <div class="input-box">
+            <span class="details">Social media links ( url )</span>
+            <input type="text" placeholder="eg: twiitter , linkedin , github , instagram" id="socialmediaTwo">
+          </div>
+          <div class="input-box">
+            <span class="details">Address as per Aadhar/PAN card</span>
+            <input type="text" placeholder="Enter address here " id="addressAtform">
+          </div>
+          <div class="input-box">
+            <span class="details">pin code </span>
+            <input type="text" placeholder="Enter pincode here " id="pincodeAtForm">
+          </div>
+          
+          <div class="title" style="width: 100%;">Certifications<span><h6 >(mention two of your certifications)</h6></span></div>
+          <div class="input-box">
+            <span class="details">Certifications 1</span>
+            <input type="text" placeholder="please enter title of certificaiton" id="certificaiton-1">
+          </div>
+          <div class="input-box">
+            <span class="details">Certifications 2</span>
+            <input type="text" placeholder="please enter title of certificaiton" id="certification-2">
+          </div>
+
+
+
+          <div class="title" style="width: 100%;">Skills and Tools / Technologies </div>
+      
+          <div class="input-box1">
+            <span class="details">Skills and Tools </span>
+            
+            <textarea type="text" placeholder="Enter your Skills and Tools " style=" padding:10px ;border-radius: 10px;height: 90px;width: 900px;" id="toolandskiils" ></textarea>
+          </div>
+          <div class="input-box1">
+            <span class="details">Commerial Languages known </span>
+            <textarea type="text" placeholder="Enter Languages known here" style="padding:10px ; border-radius: 10px;height: 90px; width: 500px;" id="languagesAtform" ></textarea>
+          </div>
+          <div class="input-box1">
+            <span class="details">Interest / Hobbies</span>  
+            <textarea type="text" placeholder="Enter Interests / Hobbies here" style="padding:10px ;   border-radius: 10px;height: 90px; width: 500px;" id="InterstesAtform" ></textarea>
+          </div>
+        </div>
+        <div >
+          <span class="details">Selet profile picture </span>
+          <input type="file" accept="image/*" onchange="loadFile(event)">
+         
+        </div>
+        
+        <div class="button">
+          <input type="submit" value="Perview Resume" onclick="resume()">
+        </div>
+   
+    </div>
+  </div>
+  <div class="container" id="resume_template" style="display:none ;">
+    <div class="row">
+      <div class="col-md-4" style="background-color: rgb(165, 238, 201) ;">
+        <div style="max-width: 250px; max-height: 250px; margin-left: 50px; overflow: hidden; border-radius: 50%;box-shadow:  0px 10px 15px rgb(136, 23, 234);"  >
+          <img id="output" class="img-fluid myimages1" src="https://www.w3schools.com/howto/img_avatar.png" style="width:100%;height: 100%;"  /> 
+
+
+        </div>
+        <div style="margin-top: 5px;" >
+          <p style="color: rgb(255, 0, 72); margin-left: 40px;" id="nameInresume" value="jaswanth">jaswanth singh</p>
+          <p id="DateOfBirthInresume">dob</p>
+          <p id="resumePhoneOne">+91 9392648992 </p>
+          <p id="resumePhoneTwo">+91 6301925513</p>
+          <p>email:-<span style="padding-left:4px ;" id="resumeEmailOne">rasaputra@gmail.com</span></p>
+          <p>email:-<span style="padding-left:4px ;"id="resumeEmailTwo">rasaputra@gmail.com</span></p>
+          <p>social:-<span style="padding-left:4px ;" id="resumesocialOne">rasaputrdfjhgdjkfhgfdgdfgdfa@gmail.com</span></p>
+          <p>social:-<span style="padding-left:4px ;" id="resumesocialTwo">rasaputra@gmaeurytieurtyieruil.com</span></p>
+         <p>----------------------------------------------</p>
+         <p>Address for communication  :-<span style="padding-left:4px ;"><address id="resumeAddress">11-168 , nimmalabavi bazar , vinukonda , guntur dist , AP .</address></span></p>
+         <p >pincode : -<span id="resumepincode">522647</span></p>
+         <p>----------------------------------------------</p>
+         <p>Languages known:-<span id="resumeLanguages"></span> </p>
+         <p>----------------------------------------------</p>
+         <p>Interest / Hobbies:- <span id="resumeInterestAndHobbies"></span></p>
+        </div>
+      </div>
+      <div class="col-md-8" style="margin-right:-5px ;">
+        <h1 class="text-center"style="margin-left:100px; color: red;" id="resume_name2">Rasaputra Jaswanth singh</h1>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401);">
+            <h5 style=" margin-top:20px;">Objectives</h>
+          </div>
+          <div class="card-body">
+            <p id="objectivesResume">
+            </p>
+          </div>
+        </div>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)">
+            <h5 style=" margin-top:20px;">Work Experience</h>
+          </div>
+          <div class="card-body">
+            <p id="workexperienecResume">
+            </p>
+          </div>
+        </div>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)">
+            <h5 style=" margin-top:20px;">Educational details</h>
+          </div>
+          <div class="card-body">
+            <div ><h5><u>Graduation</u></h5>
+            <P>Institute:-<span id="graduation-I"> Hello</span></P>
+            <P>Grade :-<span id="graduation-G" > Hello</span></P>
+            <P>Year Of Pass-Out:-<span id="graduation-Y"> Hello</span></P>
+            <P>Academic achievement:-<span id="graduation-A"> Hello</span></P>
+            <P>Additional / Curricular Activities:-
+              <span id="graduation-C"> Hello</span></P>
+            </div>
+            <div><h5><u>Intermediate/ Diploma </u></h5>
+              <P>Institute:-<span id="inter-I"> Hello</span></P>
+              <P>Grade :-<span id="inter-G"> Hello</span></P>
+              <P>Year Of Completion:-<span id="inter-Y"> Hello</span></P>
+              <P>Academic achievement:-<span id="inter-A"> Hello</span></P>
+              <P>Additional / Curricular Activities:-
+                <span id="inter-C"> Hello</span></P>
+              </div>
+            <div><h5><u>SSC</u> ( 10<sup>th</sup> )</h5>
+              <P>Institute:-<span id="SSC-I"> Hello</span></P>
+              <P>Grade :-<span id="SSC-G"> Hello</span></P>
+              <P>Year Of Completion:-<span id="SSC-Y"> Hello</span></P>
+              <P>Academic achievement:-<span id="SSC-A"> Hello</span></P>
+              <P>Additional / Curricular Activities:-
+                <span id="SSC-C"> Hello</span></P>
+            </div>
+          </div>
+        </div>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)">
+            <h5 style=" margin-top:20px;">certifications</h>
+          </div>
+          <div class="card-body">
+            <div ><h5><u>Certifications One </u></h5>
+              <pre id="certificationOneResume"></Pre>
+              
+            </div>
+            <div><h5><u>Certifications One </u></h5>
+              <pre id="certificationTwoResume"></pre>
+            
+            </div>
+            <!-- <div>ssc</div> -->
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)">
+            <h5 style=" margin-top:20px;">internship details</h>
+          </div>
+          <div class="card-body">
+            <div ><h5><u>Internship One </u></h5>
+            <p id="internship1"></p>
+            </div>
+              <div ><h5><u>Internship Two </u></h5>
+              <p id="internship2"></p>
+              </div>
+          </div>
+        </div>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)" >
+            <h5 style=" margin-top:20px;">project details</h>
+          </div>
+          <div class="card-body">
+            <div ><h5><u>project One </u></h5>
+              <p id="projectResumeone"></p>
+            </div>
+           
+            <div ><h5><u>project Two </u></h5>
+              <p id="projectResumeTwo"></p>
+            </div>
+          </div>
+        </div>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)" >
+            <h5 style=" margin-top:20px;">skills and tools / technologies</h>
+          </div>
+          <div class="card-body">
+            <div>
+              <p id="tools"></p>
+            </div>
+     
+          </div>
+        </div>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)" >
+            <h5 style=" margin-top:20px;">Commerial Languages known</h>
+          </div>
+          <div class="card-body">
+            <div>
+              <p id="Commerial"></p>
+            </div>
+     
+          </div>
+        </div>
+        <div class="card"  >
+          <div class="card-header" style="background-color: rgba(118, 1, 252, 0.401)" >
+            <h5 style=" margin-top:20px;">Intersts and Hobbies</h>
+          </div>
+          <div class="card-body">
+            <div>
+              <p id="intersts"></p>
+            </div>
+     
+          </div>
+        </div>
+       
+
+
+
+      </div>
+    
+    </div>
+    <div class="button">
+      <input type="submit" value="Generate Resume" style="width:100% ;" onclick="window.print()" >
+    </div>
+  </div>
+  <script>
+
+
+var x
+// console.log("hello",URL.createObjectURL(event.target.files[0]))
+ function    loadFile(event) {
+  // x = URL.createObjectURL(event.target.files[0]);
+  // output.onload = function() {
+  //   URL.revokeObjectURL(output.src) // free memory
+        
+  var output = document.getElementById('output')
+    
+    x = URL.createObjectURL(event.target.files[0]);
+    
+    output.src = x
+};
+  //  console.log(x)
+    function resume(){
+      // x = URL.createObjectURL(event.target.files[0]);
+      // var output = document.getElementById('output');
+     
+      var fullNames = document.getElementById("singh").value 
+      var resume_name = document.getElementById("nameInresume")
+      resume_name.innerHTML = fullNames
+      var resume_name2 = document.getElementById("resume_name2")
+      resume_name2.innerHTML = fullNames
+      var DateOfBirth = document.getElementById("DateOfBirth").value
+      var resume_DOB = document.getElementById("DateOfBirthInresume")
+      resume_DOB.innerHTML = DateOfBirth
+      var phoneOne = document.getElementById("phoneOne").value
+      var resume_phoneOne = document.getElementById("resumePhoneOne")
+      resume_phoneOne.innerHTML = phoneOne
+      var phoneTwo = document.getElementById("phoneTwo").value
+      var resume_phoneTwo = document.getElementById("resumePhoneTwo")
+      resume_phoneTwo.innerHTML = phoneTwo
+      var EmailOne = document.getElementById("EmailOne").value
+      var resumeEmailOne = document.getElementById("resumeEmailOne")
+      resumeEmailOne.innerHTML = EmailOne
+      var EmailTWo = document.getElementById("EmailTwo").value
+      var resumeEmailTwo = document.getElementById("resumeEmailTwo")
+      resumeEmailTwo.innerHTML = EmailTWo
+      var socialmediaOne = document.getElementById("socialmediaOne").value
+      var resumesocialOne = document.getElementById("resumesocialOne")
+      resumesocialOne.innerHTML = socialmediaOne
+      var socialmediaTwo = document.getElementById("socialmediaTwo").value
+      var resumesocialTwo = document.getElementById("resumesocialTwo")
+      resumesocialTwo.innerHTML = socialmediaTwo
+      var addressAtform = document.getElementById("addressAtform").value
+      var resumeAddress = document.getElementById("resumeAddress")
+      resumeAddress.innerHTML = addressAtform
+      var pincodeAtForm = document.getElementById("pincodeAtForm").value
+      var resumepincode = document.getElementById("resumepincode")
+      resumepincode.innerHTML = pincodeAtForm
+      var languagesAtform = document.getElementById("languagesAtform").value
+      var resumeLanguages = document.getElementById("resumeLanguages")
+      resumeLanguages.innerHTML = languagesAtform
+      var InterstesAtform = document.getElementById("InterstesAtform").value
+      var resumeInterestAndHobbies = document.getElementById("resumeInterestAndHobbies")
+      resumeInterestAndHobbies.innerHTML = InterstesAtform
+      var objectivesform = document.getElementById("objectivesform").value
+      var objectivesResume = document.getElementById('objectivesResume')
+      objectivesResume.innerHTML = objectivesform
+      var workexperienceForm = document.getElementById("workexperienceForm").value
+      var workexperienecResume = document.getElementById("workexperienecResume")
+      workexperienecResume.innerHTML = workexperienceForm 
+
+
+      var graduationInstitute = document.getElementById("graduationInstitute").value
+      var graduation_I = document.getElementById("graduation-I")
+      graduation_I.innerHTML = graduationInstitute
+      var graduationGrade = document.getElementById("graduationGrade").value
+      var graduation_G = document.getElementById("graduation-G")
+      graduation_G.innerHTML = graduationGrade  
+      var graduationYr = document.getElementById("graduationYr").value
+      var graduation_Y = document.getElementById("graduation-Y")
+      graduation_Y.innerHTML = graduationYr
+      var graduationAcademic = document.getElementById("graduationAcademic").value
+      console.log(graduationAcademic)
+      var graduation_A = document.getElementById("graduation-A")
+      graduation_A.innerHTML = graduationAcademic
+      var graduationExtra = document.getElementById("graduationExtra").value
+      console.log(graduationExtra)
+      var graduation_C = document.getElementById("graduation-C")
+      graduation_C.innerHTML = graduationExtra
+
+      var interinstitte= document.getElementById("interinstitte").value
+      var inter_I = document.getElementById("inter-I")
+      inter_I.innerHTML = interinstitte
+      var interGrade = document.getElementById("interGrade").value
+      var inter_G = document.getElementById("inter-G")
+      inter_G.innerHTML = interGrade  
+      var interyr = document.getElementById("interyr").value
+      var inter_Y = document.getElementById("inter-Y")
+      inter_Y.innerHTML = interyr
+      var interachievement = document.getElementById("interachievement").value
+      console.log(graduationAcademic)
+      var inter_A = document.getElementById("inter-A")
+      inter_A.innerHTML = interachievement
+      var interActivities = document.getElementById("interActivities").value
+      console.log(graduationExtra)
+      var inter_C = document.getElementById("inter-C")
+      inter_C.innerHTML = interActivities
+
+
+      var sscinstitute = document.getElementById("sscinstitute").value
+      var SSC_I = document.getElementById("SSC-I")
+      SSC_I.innerHTML = sscinstitute
+      var sscGrade = document.getElementById("sscGrade").value
+      var SSC_G = document.getElementById("SSC-G")
+      SSC_G.innerHTML = sscGrade 
+      var sscyr = document.getElementById("sscyr").value
+      var SSC_Y = document.getElementById("SSC-Y")
+      SSC_Y.innerHTML = sscyr
+      var sscacheive = document.getElementById("sscacheive").value
+      console.log(graduationAcademic)
+      var ssc_A = document.getElementById("SSC-A")
+      ssc_A.innerHTML = sscacheive
+      var sscAdditional = document.getElementById("sscAdditional").value
+      console.log(graduationExtra)
+      var SSC_C = document.getElementById("SSC-C")
+      SSC_C.innerHTML = sscAdditional
+      
+      var certificaiton_1 = document.getElementById("certificaiton-1").value
+      var certificationOneResume = document.getElementById("certificationOneResume")
+      certificationOneResume.innerHTML = certificaiton_1
+      var certificaiton_2 = document.getElementById("certification-2").value
+      var certificationTwoResume = document.getElementById("certificationTwoResume")
+      certificationTwoResume.innerHTML = certificaiton_2
+      
+      var projectOne = document.getElementById("projectOne").value
+      var projectResumeone = document.getElementById("projectResumeone")
+      projectResumeone.innerHTML = projectOne
+      var projectTwo = document.getElementById('projectTwo').value
+      var projectResumeTwo = document.getElementById("projectResumeTwo")
+      projectResumeTwo.innerHTML = projectTwo
+
+      var internOne = document.getElementById("internOne").value
+      var Internship1 = document.getElementById("internship1")
+      Internship1.innerHTML = internOne
+      var internTwo = document.getElementById("internTwo").value
+      var Internship2 = document.getElementById("internship2")
+      Internship2.innerHTML = internTwo
+      
+
+      var toolandskiils = document.getElementById("toolandskiils").value
+      var tools = document.getElementById("tools")
+      tools.innerHTML = toolandskiils
+      
+      var languagesAtform = document.getElementById("languagesAtform").value
+      // console.log(languagesAtform) 
+      var Commerial = document.getElementById("Commerial")
+      Commerial.innerHTML = languagesAtform
+
+      var InterstesAtform = document.getElementById('InterstesAtform').value
+      var intersts = document.getElementById("intersts")
+      intersts.innerHTML = InterstesAtform
+     
+      document.getElementById("resume_form").style.display = "none"
+      document.getElementById("resume_template").style.display = "block"
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
